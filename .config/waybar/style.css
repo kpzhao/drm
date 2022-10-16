@@ -40,7 +40,7 @@ window {
 }
 
 #battery {
-        color: green;
+  color: #c0caf5;
 }
 
 #battery.critical {

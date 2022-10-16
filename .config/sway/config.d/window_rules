@@ -21,7 +21,7 @@ for_window {
 [title="About Mozilla Firefox"] floating enable
 [app_id="firefox" title="^Picture-in-Picture$"] floating enable
 #[title="Extension: \(Aria2 Download Manager Integration\)"] floating enable, resize set 450 400, border pixel 10
-[title="^Library$"] floating enable, resize set 900 800, move position center
+#[title="^Library$"] floating enable, resize set 900 800, move position center
 [title="(?i)emulator"] floating enable, resize set 900 800, move position center
 [app_id="(?i)thunar"] floating enable, resize set 900 800, move position center
 [app_id="(?i)pcmanfm"] floating enable, resize set 900 800, move position center
