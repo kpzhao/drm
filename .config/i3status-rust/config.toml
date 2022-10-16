@@ -1,0 +1,61 @@
+[theme]
+name = "nord-dark"
+[theme.overrides]
+separator = " "
+
+[icons]
+name = "awesome6"
+
+[[block]]
+block = "focused_window"
+format = "{combo}"
+max_width = 50
+show_marks = "all"
+[block.theme_overrides]
+idle_bg = "#303446"
+idle_fg = "#81c8be"
+
+#[[block]]
+#block = "cpu"
+#interval = 2
+#format = "{utilization}"
+#[block.theme_overrides]
+#idle_bg = "#303446"
+#idle_fg = "#85c1dc"
+
+[[block]]
+block = "custom"
+command = "/home/mashu/bin/memfree"
+interval = 2
+[block.theme_overrides]
+idle_bg = "#303446"
+idle_fg = "#85c1dc"
+
+[[block]]
+block = "net"
+#format = "{speed_down;K*b} / {speed_up;K*b}"
+interval = 5
+[block.theme_overrides]
+idle_bg = "#303446"
+idle_fg = "#85c1dc"
+
+[[block]]
+block = "sound"
+on_click = "pavucontrol"
+format = "{volume}"
+[block.theme_overrides]
+idle_bg = "#303446"
+idle_fg = "#85c1dc"
+
+[[block]]
+block = "keyboard_layout"
+driver = "sway"
+
+[[block]]
+block = "time"
+format = "%a %m/%d %H:%M:%S"
+interval = 1
+locale = "en_US"
+[block.theme_overrides]
+idle_bg = "#303446"
+idle_fg = "#babbf1"

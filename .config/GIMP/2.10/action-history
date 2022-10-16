@@ -1,0 +1,8 @@
+# GIMP action-history
+
+(history-item "dialogs-preferences" 5)
+(history-item "image-new" 0)
+(history-item "dialogs-input-devices" 1)
+(history-item "file-open" 1)
+
+# end of action-history
