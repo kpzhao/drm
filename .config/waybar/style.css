@@ -48,9 +48,9 @@ window {
 }
 
 #battery.good {
-        color: green;
+        color: #c0caf5;
 }
 
 #battery.charging {
-        color: green;
+        color: #c0caf5;
 }
