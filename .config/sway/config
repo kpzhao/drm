@@ -10,7 +10,7 @@ set $term alacritty
 #set $menu wofi -I-m --show drun
 set $menu rofi -show drun
 #
-output * bg /home/zhao/.config/sway/wallpaper/wallpaper11.jpg fill
+output * bg /home/zhao/.config/sway/wallpaper/wallpaper1.jpg fill
 #
 output eDP-1 pos 0 0 res 2736x1824 scale 2
 
@@ -18,11 +18,10 @@ output eDP-1 pos 0 0 res 2736x1824 scale 2
 font pango:Noto Sans CJK SC 8
 
 ### Idle configuration
-exec swayidle -w \
-         timeout 300 'swaylock -f -c 000000' \
-         timeout 600 'swaymsg "output * dpms off"' \
-              resume 'swaymsg "output * dpms on"' \
-         before-sleep 'swaylock -f -c 000000'
+exec_always swayidle -w \
+         timeout 30 'swaylock -f' \
+         timeout 30 'swaymsg "output * dpms off"' \
+              resume 'swaymsg "output * dpms on"' 
 
 ### Input configuration
 input "1118:2496:Microsoft_Surface_Type_Cover_Keyboard" {

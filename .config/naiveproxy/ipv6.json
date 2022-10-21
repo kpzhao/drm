@@ -1,0 +1,4 @@
+{
+"listen":"redir://::1:1080",
+"proxy":"https://zhao:zhao@archlinux.icu:443"
+}
