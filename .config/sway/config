@@ -8,7 +8,9 @@ set $right l
 set $term alacritty
 
 #set $menu wofi -I-m --show drun
-set $menu rofi -show drun
+#set $menu rofi -show drun
+set $menu sirula
+
 #
 output * bg /home/zhao/.config/sway/wallpaper/wallpaper1.jpg fill
 #
@@ -249,7 +251,7 @@ bindsym $mod+r mode "resize"
 
     # lock
 #    bindsym $mod+l exec loginctl lock-session
-    bindsym $mod+c exec "swaylock -f -c 000000"
+    bindsym $mod+c exec "swaylock -f"
     bindsym Ctrl+Alt+Delete exec 'wlogout -b 2'
 
     #display
