@@ -1,0 +1,2 @@
+$DOTFILES/sway/config=$HOME/.config/sway/config
+$DOTFILES/sway/config.d=$HOME/.config/sway/config.d

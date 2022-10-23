@@ -1,0 +1,2 @@
+$DOTFILES/waybar/config=$HOME/.config/waybar/config
+$DOTFILES/waybar/style.css=$HOME/.config/waybar/style.css

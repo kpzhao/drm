@@ -1,0 +1,2 @@
+$DOTFILES/naiveproxy/naive=$HOME/.config/naiveproxy/naive
+$DOTFILES/naiveproxy/config.json=$HOME/.config/naive/config.json

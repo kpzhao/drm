@@ -1,0 +1,11 @@
+[Unit]
+Description=naiveproxy Service
+After=network-online.target
+
+[Service]
+Type=simple
+ExecStart=/home/zhao/.config/naiveproxy/naive /home/zhao/.config/naiveproxy/config.json
+
+[Install]
+WantedBy=default.target
+

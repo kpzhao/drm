@@ -1,0 +1,2 @@
+$DOTFILES/alacritty/alacritty.yml=$HOME/.config/alacritty/alacritty.yml
+$DOTFILES/alacritty/custom.yml=$HOME/.config/alacritty/custom.yml

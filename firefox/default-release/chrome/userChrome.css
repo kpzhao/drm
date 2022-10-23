@@ -1,0 +1,34 @@
+#sidebar-header {
+  visibility: collapse;
+}
+
+:root:not([customizing]) #navigator-toolbox:not(:hover):not(:focus-within) #nav-bar {
+  max-height: 3;
+  min-height: 0!important;
+  --tridactyl-auto-show-zone: 10px;
+  margin-bottom: calc(-1 * var(--tridactyl-auto-show-zone));
+  opacity: 0;
+}
+
+:root:not([customizing]) #navigator-toolbox:not(:hover):not(:focus-within) {
+  max-height: 3px;
+  min-height: calc(0px);
+  overflow: hidden;
+}
+
+#navigator-toolbox::after {
+  display: none !important;
+}
+
+#titlebar {
+  display: none !important;
+}
+
+#TabsToolbar {
+  visibility: collapse;
+}
+
+#statuspanel {
+  right: 0;
+  display: inline;
+}

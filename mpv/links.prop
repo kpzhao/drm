@@ -1,0 +1,5 @@
+$DOTFILES/mpv/mpv.conf=$HOME/.config/mpv/mpv.conf
+$DOTFILES/mpv/input.conf=$HOME/.config/mpv/input.conf
+$DOTFILES/mpv/scripts=$HOME/.config/mpv/scripts
+$DOTFILES/mpv/script-modules=$HOME/.config/mpv/script-modules
+$DOTFILES/mpv/script-opts=$HOME/.config/mpv/script-opts

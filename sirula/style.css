@@ -1,0 +1,36 @@
+.app-row {
+    transition: unset;
+    background-color: #eceff4;
+}
+
+.app-row:selected {
+    background-color: #A4B9EF;
+    border-radius: 16px;
+}
+
+.app-label {
+    margin-left: 10px;
+    font-family: Roboto;
+    font-size: 14px;
+    font-weight: 300;
+    color: #3b4252;
+}
+
+.app-list {
+    background-color: #f00;
+ }
+
+#root-box {
+    border: 4px solid #A4B9EF;
+    border-radius: 16px;
+    background-color: #f3f3f3;
+    padding: 4px;
+}
+
+#search {
+    background-color: #e5e9f0;
+    padding: 4px;
+    margin: 8px 4px;
+    border-color: transparent;
+    border-radius: 16px;
+}
