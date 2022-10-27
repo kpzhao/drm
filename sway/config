@@ -12,7 +12,7 @@ set $term alacritty
 set $menu sirula
 
 #
-output * bg /home/zhao/Pictures/wallpaper/1.jpg fill
+output * bg /home/zhao/Pictures/wallpaper/2.jpg fill
 #
 output eDP-1 pos 0 0 res 2736x1824 scale 2
 
@@ -311,10 +311,13 @@ client.focused #C0CAF5 #C0CAF5 #FFFFFF
 client.focused_inactive #414868 #414868 #FFFFFF
 client.unfocused #414868 #414868 #FFFFFF
 
-# xwayland
+# xwayland and hidpi
 #xwayland disbale
-exec_always  "xprop -root -format _XWAYLAND_GLOBAL_OUTPUT_SCALE 32c -set _XWAYLAND_GLOBAL_OUTPUT_SCALE 2"
-exec_always xrdb -merge ~/.Xresources
+exec_always {
+    xprop -root -format _XWAYLAND_GLOBAL_OUTPUT_SCALE 32c -set _XWAYLAND_GLOBAL_OUTPUT_SCALE 2
+    xrdb -merge <<< 'Xft.dpi: 192'
+    xsettingsd
+}
 
 # auto start
 set $wait_time 20
