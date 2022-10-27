@@ -1,6 +1,6 @@
 ignore-empty-password
 scaling=fill
-image=/usr/share/sddm/themes/sugar-dark/Background.jpg
+image=/home/zhao/Pictures/wallpaper/2.png
 color=2E3440FC
 show-keyboard-layout
 indicator-caps-lock
