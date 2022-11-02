@@ -180,8 +180,8 @@ bindsym $mod+r mode "resize"
 #
 
     # volume
-    set $volume_raise exec wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+
-    set $volume_lower exec wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-
+    set $volume_raise exec wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+ -l 1.0
+    set $volume_lower exec wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%- -l 1.0
     #set $volume_raise  "amixer -qM -D pipewire sset Master 5%+"
     #set $volume_lower  "amixer -qM -D pipewire sset Master 5%-"
     #bindsym $mod+F2 exec amixer set Master 2%- unmute
