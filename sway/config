@@ -325,7 +325,7 @@ set $wait_time 20
 
 exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 
-exec 'sleep 1;thunar --daemon'
+# exec 'sleep 1;thunar --daemon'
 exec udiskie --no-notify &
 
 # bluetooth
