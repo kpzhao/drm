@@ -4,10 +4,8 @@ set $left h
 set $down j
 set $up k
 set $right l
-# Your preferred terminal emulator
 set $term alacritty
 
-#set $menu wofi -I-m --show drun
 #set $menu rofi -show drun
 set $menu sirula
 
@@ -30,7 +28,7 @@ input "1118:2496:Microsoft_Surface_Type_Cover_Keyboard" {
     xkb_layout us
     }
 #
-input 1118:2496:Microsoft_Surface_Type_Cover_Touchpad {
+input "1118:2496:Microsoft_Surface_Type_Cover_Touchpad" {
   tap enabled
   natural_scroll enabled
   middle_emulation enabled
@@ -177,25 +175,13 @@ bindsym $mod+r mode "resize"
 #
 # special media key bindings
 #
-#
-
     # volume
     set $volume_raise exec wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+ -l 1.0
     set $volume_lower exec wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%- -l 1.0
-    #set $volume_raise  "amixer -qM -D pipewire sset Master 5%+"
-    #set $volume_lower  "amixer -qM -D pipewire sset Master 5%-"
-    #bindsym $mod+F2 exec amixer set Master 2%- unmute
-    #bindsym $mod+F3 exec amixer set Master 2%+ unmute
-    #
-    #set $volume_raise "pw-volume change +5%; pkill -RTMIN+8 waybar"
-    #set $volume_lower "pw-volume change -5%; pkill -RTMIN+8 waybar"
 
     # audio
     set $audio_mute exec wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle
     set $audio_mic_mute exec wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle
-    #set $audio_mute exec amixer -qM sset Master toggle
-    #
-    #set $audio_mute "pw-volume mute toggle; pkill -RTMIN+8 waybar"
 
     # bright
     set $bright_down exec brightnessctl set 5%-
@@ -221,15 +207,11 @@ bindsym $mod+r mode "resize"
 # extra key bindings
     bindsym Ctrl+Alt+Up exec $volume_raise
     bindsym Ctrl+Alt+Down exec $valume_lower
-    # bindsym Ctrl+Alt+p exec $audio_mute
-    # bindsym Ctrl+Alt+m exec $audio_mic_mute
-    # bindsym Ctrl+Alt+Down exec $bright_down
-    # bindsym Ctrl+Alt+Down exec $bright_up
+    bindsym Ctrl+Alt+m exec $audio_mic_mute
     bindsym Ctrl+Alt+p exec $audio_play
     bindsym Ctrl+Alt+Right exec $audio_next
     bindsym Ctrl+Alt+Left exec $audio_prev
 
-#
 #Screenshots: 
     # select area                                                                         
     bindsym Ctrl+Print                  exec grimshot copy area                           
@@ -248,19 +230,9 @@ bindsym $mod+r mode "resize"
     bindsym Ctrl+o                      exec grim -g "$(slurp)" - | tesseract stdin stdout -l eng+chi_sim+jpn -c preserve_interword_spaces=1 | tee >(wl-copy)
 #
 # keybind for custom app
-#
-
     # lock
-#    bindsym $mod+l exec loginctl lock-session
     bindsym $mod+c exec "swaylock -f"
     bindsym Ctrl+Alt+Delete exec 'wlogout -b 2'
-
-    #display
-#    set $display_setting exec wlay
-#    bindsym Ctrl+p exec $display_setting
-    # start golden_dict
-#    set $run_goldendict exec goldendict
-#    bindsym Ctrl+F11 exec $run_goldendict
 
     # toggle waybar
     bindsym $mod+shift+w exec killall -SIGUSR1 waybar
@@ -275,26 +247,6 @@ bindsym $mod+r mode "resize"
 bar {
 	swaybar_command waybar
 }
-# bar {
-    # position top
-#
-    # status_command i3status-rs --never-pause
-    #font pango:FiraCode Nerd Font bold 9
-#     font pango:Cozette,mplus12,blobmoji 10
-#     icon_theme Tela
-    # tray_output none
-    # colors {
-    	# background #303446
-    	# statusline #D8DEE9
-    	# separator  #666666
-
-    	# focused_workspace  #303446 #303446 #8CAAEE
-    	# active_workspace   #303446 #303446 #BBFBF1
-    	# inactive_workspace #2E3440 #2E3440 #D8DEE9
-    	# urgent_workspace   #BF616A #BF616A #303446
-    	# binding_mode       #2E3440 #BF616A #303446
-    # }
-# }
 
 #
 # 边框设置
@@ -325,7 +277,6 @@ set $wait_time 20
 
 exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 
-# exec 'sleep 1;thunar --daemon'
 exec udiskie --no-notify &
 
 # bluetooth
