@@ -57,6 +57,7 @@ return packer.startup(function(use)
 --  use { "lunarvim/darkplus.nvim", commit = "13ef9daad28d3cf6c5e793acfc16ddbf456e1c83" }
   use { "ellisonleao/gruvbox.nvim" , requires = "rktjmp/lush.nvim" }
   use 'shaunsingh/nord.nvim'  -- nord theme
+  use { "catppuccin/nvim" }
 
 -- dashboard
   use {'glepnir/dashboard-nvim'}
