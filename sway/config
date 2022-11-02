@@ -245,7 +245,7 @@ bindsym $mod+r mode "resize"
     bindsym $mod+Shift+Print            exec grimshot save active - |swappy -f -
 
 # OCR
-    bindsym Ctrl+o                      exec grim -g "$(slurp)" - | tesseract stdin stdout -l eng+chi_sim | tr -d ' ' | tee >(wl-copy)
+    bindsym Ctrl+o                      exec grim -g "$(slurp)" - | tesseract stdin stdout -l eng+chi_sim -c preserve_interword_spaces=1 | tee >(wl-copy)
 #
 # keybind for custom app
 #
