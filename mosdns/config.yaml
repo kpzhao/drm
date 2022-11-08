@@ -38,16 +38,7 @@ plugins:
     args:
       upstream:
         - addr: "https://dns.google/dns-query"
-          ip_addr:
-            - "8.8.8.8"
-        - addr: "https://1.1.1.1/dns-query"
-      
-      bootstrap:
-        - "tls://1.1.1.1"
-        - "https://223.5.5.5/dns-query"
-      
-      timeout: 5
-      insecure_skip_verify: false
+          dial_addr: "8.8.8.8"
 
   - tag: forward_cn
     type: fast_forward
