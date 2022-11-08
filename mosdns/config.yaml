@@ -1,0 +1,69 @@
+log:
+  level: info
+  file: ""
+
+data_providers:
+  - tag: geositecn
+    file: ./geosite_cn.txt
+
+  - tag: oisd_dbl_basic
+    file: ./oisd_dbl_basic.txt
+
+plugins:
+  - tag: "host"
+    type: "hosts"
+    args:
+      hosts:
+        - "archlinux.icu 47.243.108.118 "
+  - tag: cache
+    type: cache
+    args:
+      size: 1024
+
+  - tag: query_is_ad_domain
+    type: query_matcher
+    args:
+      domain:
+        - 'provider:oisd_dbl_basic'
+
+  - tag: query_is_cn_domain
+    type: query_matcher
+    args:
+      domain:
+        - 'provider:geositecn'
+
+  # 转发至 Google 服务器的插件
+  - tag: forward_google
+    type: fast_forward
+    args:
+      upstream:
+        - addr: https://8.8.8.8/dns-query
+
+  - tag: forward_cn
+    type: fast_forward
+    args:
+      upstream:
+        - addr: 119.29.29.29
+
+  - tag: my_sequence
+    type: "sequence"
+    args:
+      exec:
+        - cache
+        - host
+        # - if: query_is_ad_domain
+          # exec:
+            # - _new_nxdomain_response # 生成 NXDOMAIN 应答
+            # - _return                # 立刻返回 (结束本序列)
+        - if: query_is_cn_domain
+          exec:
+            - forward_cn
+        - forward_google
+
+servers:
+  - exec: my_sequence
+    listeners:
+      - protocol: udp
+        addr: 127.0.0.1:53
+      - protocol: tcp
+        addr: 127.0.0.1:53
