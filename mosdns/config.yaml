@@ -58,7 +58,10 @@ plugins:
             # - _return                # 立刻返回 (结束本序列)
         - if: query_is_cn_domain
           exec:
+            - _prefer_ipv4
             - forward_cn
+            - _return
+        - _prefer_ipv4
         - forward_google
 
 servers:
