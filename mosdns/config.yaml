@@ -61,8 +61,10 @@ plugins:
             - _prefer_ipv4
             - forward_cn
             - _return
-        - _prefer_ipv4
-        - forward_google
+          else_exec:
+            - _prefer_ipv4
+            - forward_google
+            - _return
 
 servers:
   - exec: my_sequence
