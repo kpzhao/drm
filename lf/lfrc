@@ -138,60 +138,6 @@ cmd fzf_search ${{
     [ ! -z "$res" ] && lf -remote "send $id select \"$res\""
 }}
 
-# dragon cmd
-cmd dragon %dragon-drop -a -x $fx
-cmd dragon-stay %dragon-drop -a $fx
-cmd dragon-individual %dragon-drop $fx
-cmd cpdragon ${{
-files=$(dragon-drop -t -x)
-
-for file in $files
-do
-  path=${file#file://}
-  name=$(basename "$path")
-  cp "$path" "$(pwd)/$name"
-done
-}}
-
-cmd mvdragon ${{
-files=$(dragon-drag-and-drop -t -x)
-
-for file in $files
-do
-  path=${file#file://}
-  name=$(basename "$path")
-  mv "$path" "$(pwd)/$name"
-done
-}}
-# download file 
-cmd dlfile ${{
-url=$(dragon-drag-and-drop -t -x)
-
-if [ -n "$url" ]; then
-  printf "File Name: "
-  name=""
-  while [ -z $name ] || [ -e $name ]
-  do
-    read -r name
-    if [ -e "$name" ]; then
-      printf "File already exists, overwrite (y|n): "
-      read -r ans
-
-      if [ "$ans" = "y" ]; then
-        break
-      else
-        printf "File Name: "
-      fi
-    fi
-  done
-
-  # Download the file with curl
-  [ -n "$name" ] && curl -o "$name" "$url" || exit 1
-else
-  exit 1
-fi
-}}
-
 map d
 map dd cut
 # use enter for shell commands
@@ -224,11 +170,6 @@ map zz push :z-jump<space>
 
 # Dragon mapping
 map dr dragon
-map ds dragon-stay
-map di dragon-individual
-map dm mvdragon
-map dc cpdragon
-map dl dlfile
 
 map gc cd ~/.config
 map gD cd ~/Documents
