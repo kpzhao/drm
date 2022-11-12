@@ -70,7 +70,7 @@ input "1118:2496:Microsoft_Surface_Type_Cover_Touchpad" {
 
 # Cursor
 # seat * hide_cursor 5000
-seat seat0 xcursor_theme breeze_cursors 24 
+# seat seat0 xcursor_theme breeze_cursors 24 
 focus_follows_mouse yes
 
 # Use Mouse+$mod to drag floating windows to their wanted position
