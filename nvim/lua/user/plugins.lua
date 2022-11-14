@@ -67,6 +67,8 @@ return packer.startup(function(use)
   use {'glepnir/dashboard-nvim'}
   use { "goolord/alpha-nvim" }
 
+-- indent
+  use { "lukas-reineke/indent-blankline.nvim" }
 -- nvim-cmp
   use { "hrsh7th/nvim-cmp" } -- The completion plugin
   use { "hrsh7th/cmp-buffer" } -- buffer completions
