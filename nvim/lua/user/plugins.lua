@@ -46,6 +46,8 @@ return packer.startup(function(use)
 
   use { "wbthomason/packer.nvim" } -- Have packer manage itself
 
+  use 'lewis6991/impatient.nvim'
+
 -- autopair
   use {	"windwp/nvim-autopairs" }
 -- bufferline
@@ -63,6 +65,7 @@ return packer.startup(function(use)
 
 -- dashboard
   use {'glepnir/dashboard-nvim'}
+  use { "goolord/alpha-nvim" }
 
 -- nvim-cmp
   use { "hrsh7th/nvim-cmp" } -- The completion plugin
@@ -86,6 +89,8 @@ return packer.startup(function(use)
 -- nvim-tree
   use { "kyazdani42/nvim-tree.lua", requires = "kyazdani42/nvim-web-devicons" }
 
+-- project
+  use { "ahmedkhalf/project.nvim" }
 -- treesitter
   use {
         "nvim-treesitter/nvim-treesitter",
