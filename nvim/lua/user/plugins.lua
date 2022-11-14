@@ -46,6 +46,8 @@ return packer.startup(function(use)
 
   use { "wbthomason/packer.nvim" } -- Have packer manage itself
 
+-- autopair
+  use {	"windwp/nvim-autopairs" }
 -- bufferline
   use {"akinsho/bufferline.nvim", requires = "kyazdani42/nvim-web-devicons" }
 
