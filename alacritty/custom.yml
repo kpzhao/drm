@@ -45,7 +45,7 @@ cursor:
         shape: Block
         blinking: On
 live_config_reload: true
-shell:
-    program: /bin/fish
-    args:
-        - --login
+# shell:
+#     program: /bin/fish
+#     args:
+#         - --login
