@@ -21,7 +21,6 @@ exec $HOME/.local/bin/idle.sh
 
 ### Input configuration
 input "1118:2496:Microsoft_Surface_Type_Cover_Touchpad" {
-  dwt enabled
   tap enabled
   natural_scroll enabled
   middle_emulation enabled
@@ -273,7 +272,7 @@ exec_always {
 set $wait_time 20
 
 exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
-
+exec dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
 exec udiskie --no-notify &
 
 # bluetooth
