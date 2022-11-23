@@ -1,3 +1,5 @@
 # fish
 fish/fish_variables
 fish/fishd.*
+aria2/dht.dat
+aria2/dht6.dat
