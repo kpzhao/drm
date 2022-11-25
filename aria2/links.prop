@@ -1,1 +1,6 @@
-$DOTFILES/aria2=$HOME/.config/aria2
+$DOTFILES/aria2/aria2.conf=$HOME/.config/aria2/aria2.conf
+$DOTFILES/aria2/download-start.sh=$HOME/.config/aria2/download-start.sh
+$DOTFILES/aria2/download-finish.sh=$HOME/.config/aria2/download-finish.sh
+$DOTFILES/aria2/download-error.sh=$HOME/.config/aria2/download-error.sh
+$DOTFILES/aria2/aria2.session=$HOME/.config/aria2/aria2.session
+$DOTFILES/aria2/dht.dat=$HOME/.config/aria2/dht.dat
