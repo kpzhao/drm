@@ -1,8 +1,8 @@
 {
     "spacing": 4,
     "modules-left": ["sway/workspaces", "idle_inhibitor", "sway/mode","sway/window"],
-    "modules-center": [],
-    "modules-right": ["pulseaudio", "network", "battery", "backlight","clock", "tray"],
+    "modules-center": ["custom/deadbeef"],
+    "modules-right": ["wireplumber", "network", "battery", "backlight","clock", "tray"],
     "backlight": {
     // "device": "acpi_video1",
     "format": "{percent}% {icon}",
@@ -22,6 +22,15 @@
         "timezone": "Asia/Shanghai",
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
         "format-alt": "{:%Y-%m-%d}"
+    },
+    "custom/deadbeef": {
+    "format": " {}",
+    "max-length": 50,    
+    "interval": 10,
+    "exec": "deadbeef --nowplaying-tf '{\"text\": \"%title%\", \"tooltip\":\"%artist% - %title%\",\"class\":\"$if(%isplaying%,playing,not-playing)\"}'",
+    "return-type": "json",
+    "exec-if": "pgrep deadbeef",
+    "on-click": "deadbeef --toggle-pause"
     },
     "idle_inhibitor": {
         "format": "{icon}",
@@ -73,5 +82,9 @@
     "icon-size": 18,
     "spacing": 4
     },
-
+    "wireplumber": {
+    "format": "{volume}%",
+    "format-muted": "",
+    /* "on-click": "helvum", */
+    }
 }
