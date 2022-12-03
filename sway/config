@@ -252,14 +252,15 @@ default_floating_border pixel 1
 # 主题和字体设置
 exec_always import-gsettings
 
-# client.focused          #7aa2f7 #414868 #c0caf5 #7dcfff   #7aa2f7
-# client.focused_inactive #7aa2f7 #414868 #c0caf5 #7dcfff   #7aa2f7
-# client.unfocused        #414868 #24283b #a9b1d6 #7dcfff   #414868
-# client.urgent           #e0af68 #e0af68 #1d202f #7dcfff   #e0af68
+client.focused          #7aa2f7 #414868 #c0caf5 #7dcfff   #7aa2f7
+client.focused_inactive #7aa2f7 #414868 #c0caf5 #7dcfff   #7aa2f7
+client.unfocused        #414868 #24283b #a9b1d6 #7dcfff   #414868
+client.urgent           #e0af68 #e0af68 #1d202f #7dcfff   #e0af68
 
-client.focused #C0CAF5 #C0CAF5 #FFFFFF
-client.focused_inactive #414868 #414868 #FFFFFF
-client.unfocused #414868 #414868 #FFFFFF
+# client.focused #C0CAF5 #C0CAF5 #FFFFFF
+# client.focused_inactive #414868 #414868 #FFFFFF
+# client.unfocused #414868 #414868 #FFFFFF
+
 # xwayland and hidpi
 #xwayland disbale
 exec_always {
