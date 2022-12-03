@@ -19,6 +19,9 @@ export SDL_IM_MODULE=fcitx
 export GLFW_IM_MODULE=fcitx 
 export XMODIFIERS="@im=fcitx"
 
+# qt theme
+export QT_QPA_PLATFORMTHEME=qt5ct
+
 path+=(~/.local/bin)
 
 

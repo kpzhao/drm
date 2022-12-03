@@ -82,6 +82,8 @@ bindkey "^?"      backward-delete-char
 
 bindkey "^p"      up-line-or-search
 bindkey "^n"      down-line-or-search
+bindkey '^[[A' history-beginning-search-backward
+bindkey '^[[B' history-beginning-search-forward
 bindkey '^t'      quoted-insert
 bindkey '^w'      forward-word
 bindkey '^u'      backward-word
@@ -192,7 +194,7 @@ zstyle ':completion:*:approximate:*' max-errors 1 numeric
 # 补全类型提示分组
 zstyle ':completion:*:matches' group 'yes'
 zstyle ':completion:*' group-name ''
-zstyle ':completion:*:*:-command-:*:*' group-order alias builtins functions commands
+zstyle ':completion:*:*:-command-:*:*' group-order aliases builtins functions commands
 zstyle ':completion:*:options' description 'yes'
 zstyle ':completion:*:options' auto-description '%d'
 zstyle ':completion:*:descriptions' format $'\e[01;33m -- %d --\e[0m'
@@ -342,8 +344,8 @@ load-files $files
 
 
 # }}}
-source /usr/share/fzf/key-bindings.zsh
-source /usr/share/fzf/completion.zsh
+source $ZDOTDIR/key-bindings.zsh
+source $ZDOTDIR/completion.zsh
 
 # 和zsh无关的配置 {{{1
 # PATH
