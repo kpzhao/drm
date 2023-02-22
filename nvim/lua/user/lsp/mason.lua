@@ -5,7 +5,7 @@ if (not status2) then return end
 
 mason.setup({})
 
-local servers = { "jsonls", "sumneko_lua", "yamlls" }
+local servers = { "jsonls", "yamlls" }
 require("mason-lspconfig").setup({
     ensure_installed = servers
 })

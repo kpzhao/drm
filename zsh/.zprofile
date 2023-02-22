@@ -22,6 +22,8 @@ export XMODIFIERS="@im=fcitx"
 # qt theme
 export QT_QPA_PLATFORMTHEME=qt5ct
 
+# export GDK_SCALE=2
+
 path+=(~/.local/bin)
 
 
