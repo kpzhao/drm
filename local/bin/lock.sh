@@ -1,0 +1,24 @@
+#!/bin/sh
+swaylock  \
+  --ignore-empty-password \
+  --scaling=fill \
+  --image=/home/zhao/Pictures/wallpapers/2.png \
+  --color=2E3440FC \
+  --show-keyboard-layout \
+  --indicator-caps-lock \
+  --indicator-thickness=8 \
+  --ring-color=4C56AA \
+  --bs-hl-color=ECEFF4 \
+  --key-hl-color=A3BE8CEE \
+  --inside-color=3B4252AA \
+  --inside-ver-color=3B4252AA \
+  --inside-wrong-color=D08770AA \
+  --line-uses-inside \
+  --ring-color=00000022 \
+  --ring-ver-color=00000022 \
+  --separator-color=00000044 \
+  --text-color=ECEFF4 \
+  --text-clear-color=ECEFF4 \
+  --text-caps-lock-color=ECEFF4 \
+  --text-ver-color=ECEFF4 \
+  --text-wrong-color=ECEFF4 

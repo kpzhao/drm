@@ -1,0 +1,23 @@
+#!/bin/fish
+
+set -x LANG zh_CN.UTF-8
+set -x LANGUAGE zh_CN:en_US
+
+set -x GTK_IM_MODULE fcitx
+set -x QT_IM_MODULE fcitx
+set -x SDL_IM_MODULE fcitx
+set -x GLFW_IM_MODULE fcitx 
+set -x XMODIFIERS "@im=fcitx"
+
+set -x GDK_BACKEND wayland
+set -x QT_QPA_PLATFORM wayland-egl
+set -x XDG_SESSION_TYPE wayland
+set -x QT_WAYLAND_FORCE_DPI physical
+set -x SDL_VIDEODRIVER wayland
+set -x MOZ_ENABLE_WAYLAND 1
+set -x LIBSEAT_BACKEND logind
+
+dbus-update-activation-environment DISPLAY XAUTHORITY WAYLAND_DISPLAY
+gnome-keyring-daemon --start --components=secrets
+
+exec sway $agrv

@@ -1,0 +1,13 @@
+#!/bin/sh
+
+swaymsg sticky toggle || exit 1
+
+sway_tree="$(swaymsg -t get_tree)"
+focussed_window_con_id="$(echo $sway_tree | jq -r '.. | select(.type?) | select(.focused==true).id')"
+focussed_window_app_id="$(echo $sway_tree | jq -r '.. | select(.type?) | select(.id=='"$focussed_window_con_id"').app_id')"
+focussed_window_sticky="$(echo $sway_tree | jq -r '.. | select(.type?) | select(.id=='"$focussed_window_con_id"').sticky')"
+
+[ "$focussed_window_app_id" = "null" ] && title="Toggle sticky" || title="Toggle sticky ($focussed_window_app_id)"
+[ "$focussed_window_sticky" = "true" ] && sticky="Enabled"      || sticky="Disabled"
+
+notify-send "$title" "$sticky"
