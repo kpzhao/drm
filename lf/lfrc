@@ -168,11 +168,10 @@ map Z push :z-jump<space>-I<space>
 map zb push :z-jump<space>-b<space>
 map zz push :z-jump<space>
 
-# Dragon mapping
-map dr dragon
-
 map gc cd ~/.config
 map gD cd ~/Documents
 map gd cd ~/Downloads
-map gph cd ~/Pictures
-map gV cd ~/Videos
+map gp cd ~/Pictures
+map gs cd ~/space
+map gv cd ~/Videos
+map gu cd /run/media/zhao/disk

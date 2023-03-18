@@ -38,6 +38,7 @@ assign {
 [app_id="terminal"] 3
 [title="Spreadsheets"] 9
 [app_id="libreoffice"] 9
+[title="(?i)^WPS*"] 9
 [app_id="zathura"] 8
 [app_id="okular"] 8
 }

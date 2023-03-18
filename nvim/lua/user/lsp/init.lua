@@ -3,4 +3,4 @@ if not status_ok then
   return
 end
 
-require "user.lsp.mason"
+require("mason").setup()
