@@ -245,6 +245,29 @@ bar {
 	swaybar_command waybar
 }
 
+# bar {
+#     position top
+#     status_command i3status-rs
+#     font pango:Noto Sans CJK SC 10
+#     # tray {
+#     #     icon_theme $icon_theme
+#     #     bindsym {
+#     #     # The middle button over a bar run nmtui
+#     #     button2 exec alacritty -e nmtui
+#     #     }
+#         colors {
+#     	background #191c25
+#     	statusline #D8DEE9
+#     	separator  #666666
+#
+#     	focused_workspace  #191c25 #191c25 #889bb4
+#     	active_workspace   #191c25 #191c25 #BBFBF1
+#     	inactive_workspace #191c25 #191c25 #D8DEE9
+#     	urgent_workspace   #BF616A #BF616A #191c25
+#     	binding_mode       #2E3440 #BF616A #191c25
+#     }
+# }
+
 # 边框设置
 default_border pixel 1
 default_floating_border pixel 1

@@ -7,12 +7,14 @@ start() {
   ip route add local default dev lo table 100 
   ip rule add fwmark 1 table 100
   nft -f $nftconfig
+  sudo -u xray bash -c 'xray run -c /home/zhao/.config/xray/config.json &> /dev/null' &
 }
 
 stop() {
   ip rule del fwmark 1 table 100
   ip route del local 0.0.0.0/0 dev lo table 100
   nft delete table ip xray
+  pkill xray
 }
 
 status() {

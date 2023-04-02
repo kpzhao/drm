@@ -1,7 +1,7 @@
 * {
         border: none;
         border-radius: 0;
-        font-family: Sarasa Term SC;
+        font-family: Noto Sans CJK SC; 
         font-size: 13px;
         text-shadow: none;
         box-shadow:    none;
@@ -11,8 +11,8 @@
 
 window {
         font-weight:    bold;
-        color:          #d5c4a1;
-        background:     transparent;
+        color:          #D8DEE9;
+        background:     #666666; 
 }
 
 #workspaces button {
