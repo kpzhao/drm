@@ -1,2 +1,4 @@
 $DOTFILES/fcitx5/config=$HOME/.config/fcitx5/config
 $DOTFILES/fcitx5/profile=$HOME/.config/fcitx5/profile
+$DOTFILES/fcitx5/conf/classicui.conf=$HOME/.config/fcitx5/conf/classicui.conf
+$DOTFILES/fcitx5/conf/pinyin.conf=$HOME/.config/fcitx5/conf/pinyin.conf

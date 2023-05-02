@@ -7,8 +7,8 @@ set $right l
 set $term alacritty
 
 set $wallpapers_path $HOME/Pictures/wallpapers
-#set $menu rofi -show drun
-set $menu sirula
+set $menu rofi -show drun
+# set $menu sirula
 
 output * bg $(find $wallpapers_path -type f | shuf -n 1) fill
 output eDP-1 pos 0 0 res 2736x1824 scale 2
