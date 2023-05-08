@@ -63,6 +63,17 @@ return packer.startup(function(use)
   use 'shaunsingh/nord.nvim'  -- nord theme
   use { "catppuccin/nvim" }
 
+  --coplit
+  use { 
+      "zbirenbaum/copilot.lua",   
+  }
+  use {
+      "zbirenbaum/copilot-cmp",
+      after = { "copilot.lua" },
+      config = function ()
+          require("copilot_cmp").setup()
+      end
+  }
 -- dashboard
   use {'glepnir/dashboard-nvim'}
   use { "goolord/alpha-nvim" }
